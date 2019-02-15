@@ -12,6 +12,8 @@
     }
   });
 </script>
+	
+	
 
 <script type="text/javascript"
     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -22,8 +24,9 @@
   <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
 </script>
+	
+	
 <style>
-
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -86,7 +89,69 @@
 .show {
   display: block;
 }
+	
+	
+
+.gropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.gropdown .gropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .gropdown:hover .gropbtn, .gropbtn:focus {
+  background-color: red;
+}
+
+.gropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.gropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.gropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+.show {
+  display: block;
+}
+
+.show {
+  display: block;
+}
 </style>
+
+	
+	
+	
+	
+	
+	
+	
 </head>
 <body>
 	<nav>
@@ -111,17 +176,34 @@
 		
 	
   
-	<div class="navbar">
+<div class="navbar">
   <a href="#home">Home</a>
   <a href="#news">News</a>
   <div class="dropdown">
-  <button class="dropbtn" onclick="myFunction()">Dropdown
+  <button class="dropbtn" onclick="myFunction()">Problems in Mathematics
     <i class="fa fa-caret-down"></i>
   </button>
+	  
   <div class="dropdown-content" id="myDropdown">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+    <a href="/RealAnalysis/chapter1.html">Real Analysis</a>
+    <a href="/LinearAlgebra/la.html">Linear Algebra</a>
+    <a href="/ComplexAnalysis/ca.html">Complex Analysis</a>
+    <a href="/AbstractAlgebra/aa.html">AbstractAlgebra</a>
+    <a href="/Topology/topology.html">Topology</a>
+    <a href="/ODE-PDE/odepde.html">Ordinary and Partial Differential Equations</a>
+  </div>
+  </div> 
+	
+	
+<div class="gropdown">
+  <button class="gropbtn" onclick="myFunction()">Others
+    <i class="fa fa-caret-down"></i>
+  </button>
+ 
+  <div class="gropdown-content" id="myGropdown">
+    <a href="https://www.sportskeeda.com/profile/vikas-srivastava-1">Sports</a>
+    <a href="#">Chess</a>
+    <a href="#">Tobefilledlater</a>
   </div>
   </div> 
 </div>
@@ -140,6 +222,22 @@ function myFunction() {
 window.onclick = function(e) {
   if (!e.target.matches('.dropbtn')) {
   var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+	
+	<script>
+function myFunction() {
+  document.getElementById("myGropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.gropbtn')) {
+  var myDropdown = document.getElementById("myGropdown");
     if (myDropdown.classList.contains('show')) {
       myDropdown.classList.remove('show');
     }
