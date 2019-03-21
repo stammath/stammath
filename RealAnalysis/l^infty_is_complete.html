@@ -58,34 +58,34 @@
 Let $\{x^1,x^2, \dots$ \} be a Cauchy sequence in $X$. 
 
 There is a reason we have used superscript notation to denote the sequence. Note that each element of $x $, say $x^n$ is itself a sequence, that is $$x^n={x_1^{n},x_2^{n},\dots}$$ so we have used superscript notation to avoid any confusion. 
-<br>
+<br><br>
 Aim: We want to find an element $x\in X$ suhc that $\lim_{n\to \infty} x^n=x$
 
-<br>
+<br><br>
 It is given to us that $x^n$ is Cauchy. By definition "for every $\epsilon>0$, there exist $N\in \mathbb{N}$ such that $||x^n-x^m||_\infty<\epsilon$ for all $n,m >N$
-<br>
+<br><br>
 Note that, $||x||_\infty=\sup_{i}|x_i|$ so if $||x||_\infty<\epsilon$, it would imply $|x_i|<\epsilon$ for each $i$. 
-<br>
+<br><br>
 Now we will use the above observation. We have seen that $$||x^n-x^m||_\infty<\epsilon$$  which  implies that $$\sup_{k}|x^n_k-x^m_k|<\epsilon$$ which further implies that $$|x^n_k-x^m_k|<\epsilon$$
 
 
-<br>
+<br><br>
 Consider the following sequence $x_k^1,x_k^2,x_k^3,\dots$. The last inequality shows that $x_k^1,x_k^2,\dots$ is a Cauchy sequence.
-<br>
+<br><br>
 Using the fact that $R$ is complete, we conclude that $x^n_k$ converges to some real number say $x_k$
-<br>
+<br><br>
 Let $x=(x_1,x_2,\dots)$ be a new sequence formed by taking all such limits. 
-<br>
+<br><br>
 Now we will show that $x^n$ converges to $x$
-<br>
+<br><br>
 Let $\epsilon>0$, as we have seen before we can find $N>0$ such that $|x^n_k-x^m_k|<\epsilon/2$ for all $k$, and for all $n,m>N$.
-<br>
+<br><br>
 Fix $n$ and take limit $m\to\infty$, we get that $|x^n_k-x_k|\leq\epsilon/2$
-<br>
+<br><br>
 Taking supremum over $k$ we get that $$\sup_{k}|x^n_k-x_k|\leq\epsilon/2$$
-<br>
+<br><br>
 In other words $$||x^n-x||_\infty<\epsilon/2<\epsilon$$
-<br>
+<br><br>
 This implies $x^n$ converges to $x$.
 	
 <br>
