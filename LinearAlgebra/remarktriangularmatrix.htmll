@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Stammering Mathematician</title>
+	<!-- link to main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax example</title>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+</script>
+
+</head>
+<body>
+	<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+	        	<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+        		
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb">
+        	<div class="header">
+ 
+  <h2 style="text-align:center;">Some remarks regarding triangular matrix and their eigenvalues</h2>
+
+</div>
+
+				
+    		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		
+	
+  
+	
+
+
+	<p><b>Proof</b></p>
+<p><br />
+	Some remarks: 
+
+Let me explain the concept by taking a general $4\times 4$ matrix. 
+
+</br>
+$$A = \left(
+\begin{array}{cccc}
+ a_{11} & a_{12} & a_{13} & a_{14} \\
+ 0 & a_{22} & a_{23} & a_{24} \\
+ 0 & 0 & a_{33} & a_{34} \\
+ 0 & 0 & 0 & a_{34}
+\end{array}
+\right)$$
+
+</br>
+Eigenvalues of matrix by definition are the roots of the following equation: 
+
+</br>
+$$\det({A-\lambda I})=0$$
+
+</br>
+So let's try to solve it further, 
+
+</br>
+$$A-\lambda I = \left(
+\begin{array}{cccc}
+ a_{11}-\lambda & a_{12} & a_{13} & a_{14} \\
+ 0 & a_{22}-\lambda & a_{23} & a_{24} \\
+ 0 & 0 & a_{33}-\lambda & a_{34} \\
+ 0 & 0 & 0 & a_{44}-\lambda
+\end{array}
+\right)$$
+
+
+</br>
+Expanding along the first column we get determinant is equal to 
+
+</br>
+$$(a_{11}-\lambda)(a_{22}-\lambda)(a_{33}-\lambda)(a_{44}-\lambda)$$
+
+</br>
+Putting it  equal to zero we get that roots are equal to $$a_{11},a_{22},a_{33},a_{44}$$
+
+</br>
+Since we know that roots of char. equation are eigenvalues., we conclude that eigenvalues  of the matrix are $a_{11},a_{22},a_{33},a_{44}$
+
+</br>
+SO we proved that eigenvalues of the upper triangular matrix are nothing but the diagonal entries.
+
+</br>
+Similarly we can do  it for any $n\times n$ matrix.
+
+</br>
+Recall that if the eigenvalues are distinct, matrix is diagonalizable. So for a upper triangular matrix if the diagonal entries are distinct the matrix is diagonalizable.
+
+</br>
+But \textbf{if the diagonal entries are not distinct, that is if one of them repeat itself, the matrix may not be diagonalizable. In short  can not conclude anything. Both cases may occur: matrix may be diagonalizable or matrix my be non diagonalizable. 
+
+</br>
+For example the matrix Sumon posted was 
+
+</br>
+$$\begin{pmatrix}1 &1&0\\0&3&0\\0&0&1\end{pmatrix}$$ What are the eigenvalues. As we saw above they are nothing but the diagonal entries so eigenvalues of the matrix are $1,1,3$. Eigenvalues are repeated, that is they are not distinct but matrix is diagonalizable
+
+</br>
+Now consider the following matrix:
+
+
+</br>
+
+
+$$C = \left(
+\begin{array}{cccc}
+ 1 & 1 & 0 & 0 \\
+ 0 & 1 & 0 & 0 \\
+ 0 & 0 & 1 & 1 \\
+ 0 & 0 & 0 & 1
+\end{array}
+\right)$$
+
+</br>
+It has only one eigenvalue, namely $1$. Geometric multiplicity is $2$ and algebraic multiplicity is $4$ so matrix is not diagonalizable. 
+
+</br>
+I hope it clear all the air of doubt!!
+	
+<br>
+	
+  
+	<footer>
+    		<ul>
+        		<li><a href="mailto:thestammeringmathematician@gmail.com">email</a></li>
+        		
+			</ul>
+		</footer>
+</p>
+</body>
+</html>
